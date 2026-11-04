@@ -7,6 +7,8 @@ server <- function(input, output) {
   #     
   # output$rna <-
   # 
-  # output$protein <-
+  output$protein <- renderText({
+    translate_rna(input$protein)
+  })
   
 }
