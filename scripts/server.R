@@ -5,7 +5,9 @@ server <- function(input, output) {
   #   
   # output$base_count <-
   #     
-  # output$rna <-
+  output$rna <- renderText({
+    transcribe_dna(dna = input$dna_to_rna)
+  })
   # 
   # output$protein <-
   
