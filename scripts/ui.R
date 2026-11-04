@@ -38,7 +38,7 @@ rna_in_element <- layout_columns(col_widths = 12,
 
 rna_out_element <-   layout_columns(col_widths = 12,
                                       card(
-                                      card_header("Your transcribed DNA"),
+                                      card_header("Here is your transcribed DNA"),
                                       mainPanel(
                                       verbatimTextOutput(outputId = "rna"))))
 
