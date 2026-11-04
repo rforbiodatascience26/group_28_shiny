@@ -9,6 +9,8 @@ server <- function(input, output) {
     transcribe_dna(dna = input$dna_to_rna)
   })
   # 
-  # output$protein <-
+  output$protein <- renderText({
+    translate_rna(input$protein)
+  })
   
 }

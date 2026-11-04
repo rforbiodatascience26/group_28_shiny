@@ -47,7 +47,15 @@ rna_out_element <-   layout_columns(col_widths = 12,
 
 # Protein input Element ---------------------------------------------------
 
-protein_in_element <-
+protein_in_element <- layout_columns(
+  col_widths = 12,
+  card(
+    card_header("RNA to protein translator"),
+    textInput(
+      inputId = "protein",
+      label = "Paste your RNA sequence",
+      width = "100%")
+      ))
 
 
 
