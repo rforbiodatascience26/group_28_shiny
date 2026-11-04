@@ -26,14 +26,21 @@ base_count_element <-
 
 # RNA input Element -------------------------------------------------------
 
-rna_in_element <- 
-
-
-
+rna_in_element <- layout_columns(col_widths = 12,
+                                    card(
+                                    card_header("Transcribe your DNA"),
+                                    textInput(inputId = "dna_to_rna",
+                                              label = "Paste in your DNA to transcribe",
+                                              value = "",
+                                              placeholder = "ATGCTGATCGAATAG",)))
 
 # RNA output Element ------------------------------------------------------
 
-rna_out_element <- 
+rna_out_element <-   layout_columns(col_widths = 12,
+                                      card(
+                                      card_header("Your transcribed DNA"),
+                                      mainPanel(
+                                      verbatimTextOutput(outputId = "rna"))))
 
 
 
