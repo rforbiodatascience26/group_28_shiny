@@ -83,9 +83,13 @@ dna_out_element <- layout_columns(
 
 # DNA Base Count table Element --------------------------------------------
 
-base_count_element <- 
-
-
+base_count_element <- layout_columns(
+  col_widths = 12,
+  card(
+    card_header("DNA Base Counts"),
+    tableOutput(outputId = "base_count")
+  )
+)
 
 # RNA input Element -------------------------------------------------------
 
