@@ -1,20 +1,83 @@
 
 # Title Element -----------------------------------------------------------
 
-title_element <-
+title_element <- layout_columns(
+  col_widths = 12,
+  card(
+    titlePanel("Virtual Central Dogma"),
+    style = "background-color: #f0f0f0; padding: 15px;"
+    )
+  )
+
 
 # About Element -----------------------------------------------------------
 
-about_element <-
+about_element <- layout_columns(
+  col_widths = 12,
+  card(
+    titlePanel("About"),
+    helpText("This App implements a virtual representation of the Central Dogma. 
+             In particular, the user can generate a random DNA sequence of
+             a specified length and with some nucleotide probabilities.
+             The specific sequence (or any DNA seq) can then be transcribed into
+             RNA, and the RNA sequence (or any RNA seq) can then by translated.")
+    )
+  )
 
 # DNA inputs Element ------------------------------------------------------
 
-dna_in_element <- 
+dna_in_element <- layout_columns(
+  col_widths = 12,
+  card(
+    card_header("Virtual Gene Generator"),
+    sliderInput(inputId = "n_bases",
+                label = "Number of bases:",
+                min = 1,
+                max = 60,
+                value = 30,
+                width = "100%"),
+    layout_columns(
+      col_widths = c(3, 3, 3, 3),
+      numericInput(inputId = "prob_A",
+                   label = "Probability of A",
+                   value = 0.25,
+                   min = 0,
+                   max = 1,
+                   step = 0.1),
+      numericInput(inputId = "prob_T",
+                   label = "Probability of T",
+                   value = 0.25,
+                   min = 0,
+                   max = 1,
+                   step = 0.1),
+      numericInput(inputId = "prob_C",
+                   label = "Probability of C",
+                   value = 0.25,
+                   min = 0,
+                   max = 1,
+                   step = 0.1),
+      numericInput(inputId = "prob_G",
+                   label = "Probability of G",
+                   value = 0.25,
+                   min = 0,
+                   max = 1,
+                   step = 0.1)
+      )
+    )
+  )
 
 
 # DNA output Element ------------------------------------------------------
 
-dna_out_element <- 
+dna_out_element <- layout_columns(
+  col_widths = 12,
+  card(
+    card_header("Virtual Gene output"),
+    mainPanel(
+      verbatimTextOutput(outputId = "dna")
+      )
+    )
+  )
 
 
 
