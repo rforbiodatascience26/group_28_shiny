@@ -61,7 +61,11 @@ protein_in_element <- layout_columns(
 
 # Protein output Element --------------------------------------------------
 
-protein_out_element <-
+protein_out_element <- layout_columns(col_widths = 12,
+                                      card(
+                                        card_header("Here is your translated protein"),
+                                        mainPanel(
+                                          verbatimTextOutput(outputId = "protein_out"))))
 
 
 
