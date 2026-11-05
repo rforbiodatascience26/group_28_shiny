@@ -68,8 +68,6 @@ protein_out_element <- layout_columns(col_widths = 12,
                                           verbatimTextOutput(outputId = "protein_out"))))
 
 
-
-
 # Final UI ----------------------------------------------------------------
 
 
