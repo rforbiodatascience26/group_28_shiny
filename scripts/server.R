@@ -1,3 +1,5 @@
+source(file = "app_functions.R")
+
 # Server Function ---------------------------------------------------------
 
 server <- function(input, output) {

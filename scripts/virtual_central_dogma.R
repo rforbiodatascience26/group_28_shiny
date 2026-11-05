@@ -13,4 +13,3 @@ source(file = "server.R")
 
 # Run the Shiny app
 shinyApp(ui = ui, server = server)
-
